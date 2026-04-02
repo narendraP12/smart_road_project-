@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Route Optimizer - India</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-section">
+            <div class="icon-box">🌿</div>
+            <h1>Village Route<br><span>Optimizer</span></h1>
+        </div>
+        <p class="tagline">Find the safest path avoiding flood zones and low-lying areas</p>
+
+        <div class="input-container">
+            <h4>Route Points</h4>
+            <div class="point-item">
+                <span class="dot green"></span>
+                <div><strong>Start Point:</strong> <br><small id="start-val">Click on Map</small></div>
+            </div>
+            <div class="point-item">
+                <span class="dot red"></span>
+                <div><strong>End Point:</strong> <br><small id="end-val">Click on Map</small></div>
+            </div>
+            <button id="find-route-btn" class="btn-main">Find Safe Route</button>
+            <button onclick="location.reload()" class="btn-outline">Clear Points</button>
+        </div>
+
+        <div id="summary" class="card" style="display:none;">
+            <h4>Route Summary</h4>
+            <p>Total Distance: <span id="dist-total">0</span> km</p>
+            <p>Safety Score: <span id="safety-score" style="color:#2d6a4f; font-weight:bold;">95%</span></p>
+            
+            <div class="path-table-wrapper">
+                <table id="route-table">
+                    <thead>
+                        <tr><th>Segment</th><th>Dist</th></tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="hazard-legend">
+            <h4>Hazard Zones</h4>
+            <div class="legend-row"><span class="box blue"></span> <span>Flood Zones (High Risk)</span></div>
+            <div class="legend-row"><span class="box orange"></span> <span>Low-Lying Areas</span></div>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body { margin: 0; display: flex; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fdfbf7; color: #333; }
+.sidebar { width: 360px; height: 100vh; padding: 25px; box-sizing: border-box; background: #fdfbf7; box-shadow: 2px 0 10px rgba(0,0,0,0.1); z-index: 1000; overflow-y: auto; }
+#map { flex-grow: 1; height: 100vh; background: #e0e0e0; }
+
+.logo-section { display: flex; align-items: center; gap: 12px; }
+.icon-box { background: #3d5a44; padding: 10px; border-radius: 12px; font-size: 20px; }
+h1 { font-size: 22px; margin: 0; line-height: 1; }
+h1 span { font-weight: normal; font-size: 15px; color: #666; }
+.tagline { font-size: 13px; color: #555; margin: 15px 0; }
+
+.input-container { background: white; padding: 20px; border-radius: 15px; border: 1px solid #eee; margin-bottom: 20px; }
+.point-item { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 13px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.green { background: #2d6a44; }
+.red { background: #c1121f; }
+
+.btn-main { background: #3d5a44; color: white; border: none; width: 100%; padding: 14px; border-radius: 25px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s; }
+.btn-main:hover { background: #2d4232; }
+.btn-outline { background: transparent; color: #c1121f; border: 1px solid #c1121f; width: 100%; padding: 10px; border-radius: 25px; margin-top: 10px; cursor: pointer; }
+
+.card { background: white; padding: 15px; border-radius: 15px; border: 1px solid #eee; margin-bottom: 20px; }
+.path-table-wrapper { margin-top: 10px; max-height: 200px; overflow-y: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th { text-align: left; padding: 8px; border-bottom: 2px solid #3d5a44; }
+td { padding: 8px; border-bottom: 1px solid #eee; }
+
+.hazard-legend { background: white; padding: 15px; border-radius: 15px; border: 1px solid #eee; }
+.legend-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 12px; }
+.box { width: 14px; height: 14px; border-radius: 3px; }
+.blue { background: rgba(0, 100, 255, 0.5); border: 1px solid blue; }
+.orange { background: rgba(255, 100, 0, 0.5); border: 1px solid orange; }
