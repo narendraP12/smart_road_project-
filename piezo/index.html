@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piezo Road Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>⚡ Piezo-Electric Road Monitor</h1>
+            <p>Live Energy Harvesting from Traffic Vibration</p>
+        </div>
+
+        <div class="main-stats">
+            <div class="card">
+                <h3>Live Power</h3>
+                <div class="value green"><span id="live-p">0.00</span> mW</div>
+                <div class="indicator">● Live from ESP32</div>
+            </div>
+            <div class="card">
+                <h3>Total Joules</h3>
+                <div class="value blue"><span id="total-j">0.000</span> J</div>
+            </div>
+            <div class="card">
+                <h3>Peak Voltage</h3>
+                <div class="value yellow"><span id="peak-v">0.0</span> V</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="liveChart"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
